@@ -1,20 +1,33 @@
-import React from 'react'
+import React from "react";
 
-const Card = ({size,description,title,profile,bg}) => {
+const Card = ({ size, description, title, profile, bg }) => {
   return (
-    <div className='w-1/2'>
-        <div className='h-52 flex'>
-            <img className='rounded-t-[1.5rem] object-cover'   src={bg}/>
-            </div>
-            <div className='bg-[#232b2f] relative '>
-                <div className= 'absolute w-16 h-16 p-1 bg-[#232b2f]  flex -top-8 left-4 rounded-t-[0.4rem]'>
-                    <img src={profile} className=' object-cover rounded-t-[0.4rem]'/>
-                </div>
-            </div>
-        
+    <div className="w-full  ">
+      {/* Banner  */}
+      <div className="  h-40 flex  w-full">
+        <img src={bg} className="rounded-t-[0.8rem] object-cover w-full" />
+      </div>
+      <div className="bg-[#292b2f] relative h-[11.5rem] px-[1rem] rounded-b-[0.8rem] ">
+        {/* Profile Pic  */}
+        <div className="absolute -top-8  left-4 w-16 h-16 flex rounded-[1rem] p-1 bg-[#292b2f]">
+          <img src={profile} className="  object-cover   rounded-[1rem]" />
+        </div>
 
+        {/* Title  */}
+
+        <p className="text-white font-bold text-[17px] pt-9">{title}</p>
+
+        {/* Description  */}
+        <p className=" text-gray-400 font-medium text-[15px] pt-1">
+          {description}
+        </p>
+        {/* Size  */}
+        <p className=" text-gray-400 font-medium text-[13.5px] pt-3 pb-4 ">
+          {size}
+        </p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;
